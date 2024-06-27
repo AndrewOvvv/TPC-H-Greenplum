@@ -125,11 +125,21 @@ function print_log() {
 
 mkdir $RESULTS;
 export PGPASSWORD=$PWD
+
 # start statistics collection
 benchmark_start $RESULTS
 # run the benchmark
-print_log "start benchmark"
-benchmark_dss $RESULTS 
-print_log "start benchmark"
+print_log "running benchmark..."
+benchmark_dss $RESULTS
 # stop statistics collection
 benchmark_stop
+print_log "benchmark finished"
+
+print_log "creating results archive..."
+zip -r results.zip results
+print_log "results archive created"
+
+print_log "removing results directory..."
+rm -rf results
+print_log "results directory removed"
+17 lines yanked
