@@ -23,19 +23,19 @@ function benchmark_run() {
 
 	# create database, populate it with data and set up foreign keys
 	print_log "  loading data"
-	psql -h $HOST -U $USER $DBNAME < dss/tpch-load.sql > $RESULTS/load.log 2> $RESULTS/load.err
+	psql -h $HOST -U $USER $DBNAME < src/dss/tpch-load.sql > $RESULTS/load.log 2> $RESULTS/load.err
 
 	print_log "  creating primary keys"
-	psql -h $HOST -U $USER $DBNAME < dss/tpch-pkeys.sql > $RESULTS/pkeys.log 2> $RESULTS/pkeys.err
+	psql -h $HOST -U $USER $DBNAME < src/dss/tpch-pkeys.sql > $RESULTS/pkeys.log 2> $RESULTS/pkeys.err
 
 	print_log "  creating foreign keys"
-	psql -h $HOST -U $USER $DBNAME < dss/tpch-alter.sql > $RESULTS/alter.log 2> $RESULTS/alter.err
+	psql -h $HOST -U $USER $DBNAME < src/dss/tpch-alter.sql > $RESULTS/alter.log 2> $RESULTS/alter.err
 
 	print_log "  creating indexes"
-	psql -h $HOST -U $USER $DBNAME < dss/tpch-index.sql > $RESULTS/index.log 2> $RESULTS/index.err
+	psql -h $HOST -U $USER $DBNAME < src/dss/tpch-index.sql > $RESULTS/index.log 2> $RESULTS/index.err
 
 	print_log "  analyzing"
-	psql -h $HOST -U $USER $DBNAME < dss/tpch-analyze.sql > $RESULTS/analyze.log 2> $RESULTS/analyze.err
+	psql -h $HOST -U $USER $DBNAME < src/dss/tpch-analyze.sql > $RESULTS/analyze.log 2> $RESULTS/analyze.err
 
 	print_log "finished"
 }

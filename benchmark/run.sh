@@ -30,8 +30,8 @@ function benchmark_dss() {
 	for n in `seq 1 22`
 	do
 
-		q="dss/queries/$n.sql"
-		qe="dss/queries/$n.explain.sql"
+		q="src/dss/queries/$n.sql"
+		qe="src/dss/queries/$n.explain.sql"
 
 		if [ -f "$q" ]; then
 

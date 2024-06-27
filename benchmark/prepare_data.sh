@@ -1,11 +1,11 @@
 #!/bin/sh
 set -e
 
-GP_TPCH_HOME=`readlink -f .`
-DSS_TEMPLATES=$GP_TPCH_HOME/dss/templates
-DSS_QUERIES=$GP_TPCH_HOME/dss/queries
-DSS_DATA=$GP_TPCH_HOME/dss/data
-DBGEN=$GP_TPCH_HOME/tpch/dbgen
+GP_TPCH_HOME=`readlink -f ..`
+DSS_TEMPLATES=$GP_TPCH_HOME/src/dss/templates
+DSS_QUERIES=$GP_TPCH_HOME/src/dss/queries
+DSS_DATA=$GP_TPCH_HOME/src/dss/data
+DBGEN=$GP_TPCH_HOME/src/tpch/dbgen
 
 gen_queries=false
 gen_data=false
