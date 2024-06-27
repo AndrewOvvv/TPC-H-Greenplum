@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-GP_TPCH_HOME=`readlink -f ..`
+GP_TPCH_HOME=`readlink -f .`
 DSS_TEMPLATES=$GP_TPCH_HOME/src/dss/templates
 DSS_QUERIES=$GP_TPCH_HOME/src/dss/queries
 DSS_DATA=$GP_TPCH_HOME/src/dss/data
