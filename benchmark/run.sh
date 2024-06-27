@@ -1,10 +1,10 @@
 #!/bin/sh
 
 RESULTS=results
-HOST=$1
-DBNAME=$2
-USER=$3
-PWD=$4
+HOST=localhost
+DBNAME=$1
+USER=$2
+PWD=$3
 # delay between stats collections (iostat, vmstat, ...)
 DELAY=15
 
