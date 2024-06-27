@@ -64,7 +64,7 @@ function load_data_stop()
 
 function print_log() {
 	local message=$1
-	echo `date +"%Y-%m-%d %H:%M:%S"` "["`date +%s`"] : $message" >> $RESULTS/$LOGFILE;
+	echo `date +"%Y-%m-%d %H:%M:%S"` "["`date +%s`"] : $message" >> $LOGFILE;
 	echo `date +"%Y-%m-%d %H:%M:%S"` "["`date +%s`"] : $message";
 
 }
