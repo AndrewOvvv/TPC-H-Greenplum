@@ -103,7 +103,7 @@
 		$diff['tup_deleted'] = $matches_after[12] - $matches_before[12];
 
         if ($diff['blks_hit'] == 0) {
-            $diff['hit_ratio'] = 0
+            $diff['hit_ratio'] = 0;
         } else {
             $diff['hit_ratio'] = round(floatval(100*$diff['blks_hit']) / ($diff['blks_hit'] + $diff['blks_read']),1);
         }
