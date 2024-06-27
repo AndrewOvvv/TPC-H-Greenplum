@@ -142,4 +142,3 @@ print_log "results archive created"
 print_log "removing results directory..."
 rm -rf results
 print_log "results directory removed"
-17 lines yanked
